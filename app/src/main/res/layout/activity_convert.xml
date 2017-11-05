@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.btcfx.Convert">
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/radioGroup"
+        android:padding="24dp"
+        android:layout_alignParentStart="true">
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/radioBtc"
+            android:checked="true"
+            android:text="BTC"
+            android:onClick="onRadioButtonClicked"/>
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/radioCurrency"
+            android:text="Currency"
+            android:onClick="onRadioButtonClicked"/>
+    </RadioGroup>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="BTC"
+        android:layout_below="@+id/radioGroup"
+        android:layout_marginLeft="32dp"
+        android:textSize="32dp"
+        android:textStyle="bold"
+        android:id="@+id/currencyTextView"/>
+    
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/currencyTextView"
+        android:hint="Enter amount"
+        android:layout_margin="8dp"
+        android:padding="24dp"
+        android:id="@+id/currencyEditText"
+        android:imeOptions="actionDone"
+        android:gravity="center"
+        android:inputType="numberDecimal" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/currencyEditText"
+        android:padding="24dp"
+        android:layout_margin="8dp"
+        android:background="@color/colorPrimary"
+        android:text="Convert"
+        android:textColor="#ffffff"
+        android:id="@+id/convertButton"
+        android:layout_marginTop="16dp"
+        android:onClick="convert"/>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="BTC"
+        android:layout_below="@+id/convertButton"
+        android:layout_marginLeft="32dp"
+        android:textSize="32dp"
+        android:textStyle="bold"
+        android:id="@+id/convertedTextView"
+        android:gravity="center"
+        android:layout_margin="32dp"
+        android:inputType="textMultiLine" />
+
+
+</RelativeLayout>
